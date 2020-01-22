@@ -32,7 +32,7 @@ const Game = () => {
     }, 1000);
     if (optNumbers.length >= 10) {
       window.clearInterval(timeID.current) 
-      setHighScore(h => h + score)
+      setHighScore(s => score > s ? score: s)
       setOver(true)
     }
     return () => window.clearInterval(timeID.current);
@@ -45,7 +45,7 @@ const Game = () => {
       setOptNumbes([])
       setScore(0)
       setOver(true)
-      setHighScore(s => s + score)
+      setHighScore(s => score > s ? score: s)
     }
     if (ten === 10) {
       setScore(s => s + 1)
@@ -58,7 +58,7 @@ const Game = () => {
       setOptNumbes([])
       setScore(0)
       setOver(true)
-      setHighScore(s => s + score)
+      setHighScore(s => score > s ? score: s)
     }
   }, [ten])
 
