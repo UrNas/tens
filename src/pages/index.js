@@ -44,13 +44,21 @@ const Game = () => {
       setTrakClick(0)
       setOptNumbes([])
       setScore(0)
-      setOver(false)
+      setOver(true)
       setHighScore(s => s + score)
     }
     if (ten === 10) {
       setScore(s => s + 1)
       setTen(0)
       setTrakClick(0)
+    }
+    if (ten > 10) {
+      setTen(0)
+      setTrakClick(0)
+      setOptNumbes([])
+      setScore(0)
+      setOver(true)
+      setHighScore(s => s + score)
     }
   }, [ten])
 
