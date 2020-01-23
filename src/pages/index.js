@@ -68,7 +68,6 @@ const Game = () => {
     const id = e.target.dataset.key;
     const number = window.parseInt(e.target.textContent)
     setOptNumbes(oldOptNumbers => oldOptNumbers.filter(n => n.id !== id));
-    console.log(number)
     setTen(t => t + number)
     setTrakClick(t => t + 1)
   };
